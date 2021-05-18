@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="schdularapiFlow" doc:id="b367cba4-8c82-4071-9962-48e53f33a6d2" >
+		<scheduler doc:name="Scheduler" doc:id="8abc1893-22d1-4b34-a65b-f40e8fe4cc42" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="10" timeUnit="MINUTES"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="8bb4bf1c-7a8c-4217-a798-4639032efde9" message='#["hiiii"]'/>
+	</flow>
+</mule>
